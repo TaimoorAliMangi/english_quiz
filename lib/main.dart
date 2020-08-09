@@ -1,4 +1,5 @@
 import 'dart:ui';
+import 'package:english_quiz/AlmostThereScreen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/painting.dart';
 import 'package:flutter/rendering.dart';
@@ -63,8 +64,8 @@ const TextStyle signupScreen_asterik = TextStyle(
 );
 
 const TextStyle scoreCategoryScreen = TextStyle(
-  fontSize: 20.0,
-  fontWeight: FontWeight.bold,
+  fontSize: 22.0,
+  // fontWeight: FontWeight.bold,
   color: Colors.yellow,
 );
 
@@ -94,10 +95,10 @@ final Color kfacebookButtonColor = Color(0xFF50C0E4);
 final Color kgmailButtonColor = Color(0xFFDE5151);
 final Color ksignupButtonColor = Color(0xFFE2BC47);
 
-final Color kVerbalReasoningColor = Color(0xFF67C38D);
-final Color kMathColor = Color(0xFF50C0E4);
-final Color kEnglishGrammarandCompColor = Color(0xFFDE5151);
-final Color kNonVerbalColor = Color(0xFFE2BC47);
+final Color kSynonymColor = Color(0xFF67C38D);
+final Color kClozeColor = Color(0xFF50C0E4);
+final Color kShuffledSentences = Color(0xFFDE5151);
+final Color kAntonyms = Color(0xFFE2BC47);
 
 final OutlineInputBorder outputBorderStyle_TextField = OutlineInputBorder(
     borderRadius: BorderRadius.circular(10.0),
@@ -115,13 +116,13 @@ final BorderSide borderside = BorderSide(
     color: ksignupButtonColor,
     style: BorderStyle.solid); //This is used to edit the score border
 
-const TextStyle ts_verbalReasoningButtonSelected = TextStyle(
+const TextStyle ts_verbalReasoningButtonDefault = TextStyle(
   fontWeight: FontWeight.bold,
   fontSize: 25.0,
   color: Color(0xFF6F6F6F),
 );
 
-const TextStyle ts_verbalReasoningButtonDefault = TextStyle(
+const TextStyle ts_verbalReasoningButtonSelected = TextStyle(
   fontWeight: FontWeight.bold,
   fontSize: 25.0,
   color: Colors.white,
