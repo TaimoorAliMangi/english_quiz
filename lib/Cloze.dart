@@ -3,8 +3,21 @@ import 'package:flutter/material.dart';
 import 'package:english_quiz/CustomButtons.dart';
 import 'package:english_quiz/main.dart';
 
-const Color kSynonymButtonColorUnselected = Color(0xFFADD9C0);
+const Color kSynonymButtonColorUnselected = Color(0xFFA4DEF1);
 const Color kSynonymButtonColorSelected = Color(0xFFF6F6F6);
+const Color listViewBackgroundColor = Color(0xFF50C0E5);
+
+const TextStyle ts_ShuffledSentences = TextStyle(
+  fontWeight: FontWeight.bold,
+  fontSize: 25.0,
+  color: listViewBackgroundColor,
+);
+
+const TextStyle buttonTextContinue = TextStyle(
+  fontWeight: FontWeight.w500,
+  fontSize: 20.0,
+  color: listViewBackgroundColor,
+);
 
 const TextStyle ts_SynonymButtonSelected = TextStyle(
   fontWeight: FontWeight.bold,
@@ -13,9 +26,8 @@ const TextStyle ts_SynonymButtonSelected = TextStyle(
 );
 
 const TextStyle ts_SynonymButtonUnSelected = TextStyle(
-  fontWeight: FontWeight.bold,
   fontSize: 25.0,
-  color: Color(0xFF82B296),
+  color: Colors.grey,
 );
 
 const TextStyle ts_SynonymScreen = TextStyle(
@@ -69,12 +81,12 @@ final TextStyle ts_currentSynonymLevelStyle15 = ts_SynonymButtonUnSelected;
 
 enum screenState { levelSelectorState, continueState }
 
-class SynonymScreen extends StatefulWidget {
+class ClozeScreen extends StatefulWidget {
   @override
-  _SynonymScreenState createState() => _SynonymScreenState();
+  _ClozeScreenState createState() => _ClozeScreenState();
 }
 
-class _SynonymScreenState extends State<SynonymScreen> {
+class _ClozeScreenState extends State<ClozeScreen> {
   bool viewSelector =
       false; //this helps track if level button has been pressed by the user or not
   double heightScreen;
@@ -120,7 +132,7 @@ class _SynonymScreenState extends State<SynonymScreen> {
     ts_currentSynonymLevelStyle15
   ];
 
-  //TODO Need to Edit Level in case more levelBlocks are to be added
+//TODO Need to Edit Level in case more levelBlocks are to be added
   List<String> levels = [
     'Level 1',
     'Level 2',
@@ -178,9 +190,9 @@ class _SynonymScreenState extends State<SynonymScreen> {
                 levels[indexLevels1], ts_LevelButtons[indexTextStyles1]),
             c: colorsList[IndexColorList1],
             func: () {
-              //TODO this function is called when Odd level is selected, please note that based on the arguments you can find out which level was clicked and code accordingly
+//TODO this function is called when Odd level is selected, please note that based on the arguments you can find out which level was clicked and code accordingly
 
-              //this code is resposible for changing color and textStyle
+//this code is resposible for changing color and textStyle
               setState(() {
                 if (colorsList[IndexColorList1] ==
                     kSynonymButtonColorUnselected) {
@@ -189,7 +201,7 @@ class _SynonymScreenState extends State<SynonymScreen> {
                   ts_LevelButtons[indexTextStyles1] = ts_SynonymButtonSelected;
                   colorTextStyleInitializer(indexLevels1);
 
-                  //TODO Add delay of 200ms
+//TODO Add delay of 200ms
                   screenStateString = screenState.continueState.toString();
                   print('The state is $screenStateString');
                   viewSelector = true;
@@ -202,15 +214,15 @@ class _SynonymScreenState extends State<SynonymScreen> {
           width: 10.0,
         ),
         Expanded(
-          //padding: EdgeInsets.all(8.0),
+//padding: EdgeInsets.all(8.0),
           child: CustomButton(
             height: 100.0,
             childw: textWidgetCreator(
                 levels[indexLevels2], ts_LevelButtons[indexTextStyles2]),
             c: colorsList[IndexColorList2],
             func: () {
-              //TODO this function is called when Even level is selected, please note that based on the arguments you can find out which level was clicked and code accordingly
-              //this code is resposible for changing color and textStyle
+//TODO this function is called when Even level is selected, please note that based on the arguments you can find out which level was clicked and code accordingly
+//this code is resposible for changing color and textStyle
               setState(() {
                 if (colorsList[IndexColorList2] ==
                     kSynonymButtonColorUnselected) {
@@ -219,7 +231,7 @@ class _SynonymScreenState extends State<SynonymScreen> {
 
                   colorTextStyleInitializer(indexLevels2);
 
-                  //TODO Add delay of 200ms
+//TODO Add delay of 200ms
                   screenStateString = screenState.continueState.toString();
                   print('The state is $screenStateString');
                   viewSelector = true;
@@ -257,7 +269,7 @@ class _SynonymScreenState extends State<SynonymScreen> {
                 children: <Widget>[
                   GestureDetector(
                     onTap: () {
-                      //TODO This place is called when Backbutton is pressed inside SynonymLevelScreen
+//TODO This place is called when Backbutton is pressed inside SynonymLevelScreen
                       print('Back Pressed');
                       print('The state is $screenStateString');
                       setState(() {
@@ -280,7 +292,7 @@ class _SynonymScreenState extends State<SynonymScreen> {
                         ),
                         Text(
                           'Back',
-                          //scoreVerbalCategory.toString(),
+//scoreVerbalCategory.toString(),
                           style: TextStyle(color: Colors.grey, fontSize: 15.0),
                           textAlign: TextAlign.start,
                         )
@@ -289,7 +301,7 @@ class _SynonymScreenState extends State<SynonymScreen> {
                   ),
                   GestureDetector(
                     onTap: () {
-                      //TODO THis place is called when Settings/More button in CategoryScreen is pressed, top right corner.
+//TODO THis place is called when Settings/More button in CategoryScreen is pressed, top right corner.
                       print('Settings Pressed');
                     },
                     child: Icon(
@@ -308,15 +320,15 @@ class _SynonymScreenState extends State<SynonymScreen> {
                   Container(
                     margin: EdgeInsets.all(10.0),
                     child: Text(
-                      'Synonyms',
-                      style: ts_VerbalReasoning,
+                      'Cloze',
+                      style: ts_ShuffledSentences,
                       textAlign: TextAlign.center,
                     ),
                   ),
                   Container(
                     height: listViewHeight,
                     decoration: BoxDecoration(
-                      color: Color(0xFF65C28D),
+                      color: listViewBackgroundColor,
                       borderRadius: BorderRadius.only(
                         topLeft: Radius.circular(20.0),
                         topRight: Radius.circular(20.0),
@@ -390,11 +402,11 @@ class _SynonymScreenState extends State<SynonymScreen> {
             height: 10.0,
           ),
           Text(
-            'Find the word with the',
+            'Fill the blanks with the',
             style: ts_SynonymScreenSmall,
           ),
           Text(
-            'similar meaning',
+            'correct word',
             style: ts_SynonymScreenSmall,
           ),
           Row(
@@ -415,7 +427,7 @@ class _SynonymScreenState extends State<SynonymScreen> {
                   ),
                   height: heightScreen * 0.4,
                   child: Image.asset(
-                    'assets/synonymScreenContinue.JPG',
+                    'assets/ClozeScreenContinue.JPG',
                     fit: BoxFit.contain,
                   ),
                 ),
@@ -430,7 +442,7 @@ class _SynonymScreenState extends State<SynonymScreen> {
               style: buttonTextContinue,
             ),
             func: () {
-              //TODO this is called when continue is pressed
+//TODO this is called when continue is pressed
             },
             c: Colors.white,
           ),
@@ -442,9 +454,3 @@ class _SynonymScreenState extends State<SynonymScreen> {
     }
   }
 }
-
-const TextStyle buttonTextContinue = TextStyle(
-  fontWeight: FontWeight.w500,
-  fontSize: 20.0,
-  color: Color(0xFF5FB884),
-);

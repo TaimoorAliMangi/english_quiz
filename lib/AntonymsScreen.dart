@@ -3,8 +3,21 @@ import 'package:flutter/material.dart';
 import 'package:english_quiz/CustomButtons.dart';
 import 'package:english_quiz/main.dart';
 
-const Color kSynonymButtonColorUnselected = Color(0xFFADD9C0);
+const Color kSynonymButtonColorUnselected = Color(0xFFF1DDA0);
 const Color kSynonymButtonColorSelected = Color(0xFFF6F6F6);
+const Color listViewBackgroundColor = Color(0xFFE4BE48);
+
+const TextStyle ts_Antonyms = TextStyle(
+  fontWeight: FontWeight.bold,
+  fontSize: 25.0,
+  color: listViewBackgroundColor,
+);
+
+const TextStyle buttonTextContinue = TextStyle(
+  fontWeight: FontWeight.w500,
+  fontSize: 20.0,
+  color: listViewBackgroundColor,
+);
 
 const TextStyle ts_SynonymButtonSelected = TextStyle(
   fontWeight: FontWeight.bold,
@@ -13,9 +26,8 @@ const TextStyle ts_SynonymButtonSelected = TextStyle(
 );
 
 const TextStyle ts_SynonymButtonUnSelected = TextStyle(
-  fontWeight: FontWeight.bold,
   fontSize: 25.0,
-  color: Color(0xFF82B296),
+  color: Colors.grey,
 );
 
 const TextStyle ts_SynonymScreen = TextStyle(
@@ -69,12 +81,12 @@ final TextStyle ts_currentSynonymLevelStyle15 = ts_SynonymButtonUnSelected;
 
 enum screenState { levelSelectorState, continueState }
 
-class SynonymScreen extends StatefulWidget {
+class AntonymScreen extends StatefulWidget {
   @override
-  _SynonymScreenState createState() => _SynonymScreenState();
+  _AntonymScreenState createState() => _AntonymScreenState();
 }
 
-class _SynonymScreenState extends State<SynonymScreen> {
+class _AntonymScreenState extends State<AntonymScreen> {
   bool viewSelector =
       false; //this helps track if level button has been pressed by the user or not
   double heightScreen;
@@ -120,7 +132,7 @@ class _SynonymScreenState extends State<SynonymScreen> {
     ts_currentSynonymLevelStyle15
   ];
 
-  //TODO Need to Edit Level in case more levelBlocks are to be added
+//TODO Need to Edit Level in case more levelBlocks are to be added
   List<String> levels = [
     'Level 1',
     'Level 2',
@@ -308,15 +320,15 @@ class _SynonymScreenState extends State<SynonymScreen> {
                   Container(
                     margin: EdgeInsets.all(10.0),
                     child: Text(
-                      'Synonyms',
-                      style: ts_VerbalReasoning,
+                      'Antonyms',
+                      style: ts_Antonyms,
                       textAlign: TextAlign.center,
                     ),
                   ),
                   Container(
                     height: listViewHeight,
                     decoration: BoxDecoration(
-                      color: Color(0xFF65C28D),
+                      color: listViewBackgroundColor,
                       borderRadius: BorderRadius.only(
                         topLeft: Radius.circular(20.0),
                         topRight: Radius.circular(20.0),
@@ -394,7 +406,7 @@ class _SynonymScreenState extends State<SynonymScreen> {
             style: ts_SynonymScreenSmall,
           ),
           Text(
-            'similar meaning',
+            'opposite meaning',
             style: ts_SynonymScreenSmall,
           ),
           Row(
@@ -415,7 +427,7 @@ class _SynonymScreenState extends State<SynonymScreen> {
                   ),
                   height: heightScreen * 0.4,
                   child: Image.asset(
-                    'assets/synonymScreenContinue.JPG',
+                    'assets/AntonymScreenContinue.JPG',
                     fit: BoxFit.contain,
                   ),
                 ),
@@ -442,9 +454,3 @@ class _SynonymScreenState extends State<SynonymScreen> {
     }
   }
 }
-
-const TextStyle buttonTextContinue = TextStyle(
-  fontWeight: FontWeight.w500,
-  fontSize: 20.0,
-  color: Color(0xFF5FB884),
-);

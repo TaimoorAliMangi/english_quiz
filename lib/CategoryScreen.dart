@@ -1,3 +1,6 @@
+import 'package:english_quiz/AntonymsScreen.dart';
+import 'package:english_quiz/Cloze.dart';
+import 'package:english_quiz/ShuffledSentences.dart';
 import 'package:english_quiz/SynonymScreen.dart';
 import 'main.dart';
 import 'package:flutter/material.dart';
@@ -158,7 +161,13 @@ class _CategorySelectionScreenState extends State<CategorySelectionScreen> {
                       height: 75.0,
                       func: () {
                         //TODO This code is responsible for when Antonyms Button in Category Screen is clicked
-                        setState(() {});
+                        setState(() {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => AntonymScreen(),
+                              ));
+                        });
                       },
                       c: kAntonyms,
                     ),
@@ -180,7 +189,13 @@ class _CategorySelectionScreenState extends State<CategorySelectionScreen> {
                       height: 75.0,
                       func: () {
                         //TODO This code is responsible for when ShuffledSentences and Comprehension Button in Category Screen is clicked
-                        setState(() {});
+                        setState(() {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => ShuffledScreen(),
+                              ));
+                        });
                       },
                       c: kShuffledSentences,
                     ),
@@ -197,7 +212,13 @@ class _CategorySelectionScreenState extends State<CategorySelectionScreen> {
                       height: 75.0,
                       func: () {
                         //TODO This code is responsible for when Cloze Button in Category Screen is clicked
-                        setState(() {});
+                        setState(() {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => ClozeScreen(),
+                              ));
+                        });
                       },
                       c: kClozeColor,
                     ),

@@ -1,5 +1,4 @@
 import 'dart:ui';
-import 'package:english_quiz/AlmostThereScreen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/painting.dart';
 import 'package:flutter/rendering.dart';
@@ -115,18 +114,6 @@ final BorderSide borderside = BorderSide(
     width: 1.0,
     color: ksignupButtonColor,
     style: BorderStyle.solid); //This is used to edit the score border
-
-const TextStyle ts_verbalReasoningButtonDefault = TextStyle(
-  fontWeight: FontWeight.bold,
-  fontSize: 25.0,
-  color: Color(0xFF6F6F6F),
-);
-
-const TextStyle ts_verbalReasoningButtonSelected = TextStyle(
-  fontWeight: FontWeight.bold,
-  fontSize: 25.0,
-  color: Colors.white,
-);
 
 void main() {
   runApp(
