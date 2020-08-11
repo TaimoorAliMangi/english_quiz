@@ -173,6 +173,9 @@ class _SynonymScreenState extends State<SynonymScreen> {
       children: <Widget>[
         Expanded(
           child: CustomButton(
+            shapeborder: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(12.0),
+            ),
             height: 100.0,
             childw: textWidgetCreator(
                 levels[indexLevels1], ts_LevelButtons[indexTextStyles1]),
@@ -204,6 +207,9 @@ class _SynonymScreenState extends State<SynonymScreen> {
         Expanded(
           //padding: EdgeInsets.all(8.0),
           child: CustomButton(
+            shapeborder: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(12.0),
+            ),
             height: 100.0,
             childw: textWidgetCreator(
                 levels[indexLevels2], ts_LevelButtons[indexTextStyles2]),
@@ -423,6 +429,9 @@ class _SynonymScreenState extends State<SynonymScreen> {
             ],
           ),
           CustomButton(
+            shapeborder: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(12.0),
+            ),
             width: 350.0,
             height: 70.0,
             childw: Text(

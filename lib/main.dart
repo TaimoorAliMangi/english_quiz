@@ -4,6 +4,7 @@ import 'package:flutter/painting.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter/material.dart';
 import 'package:english_quiz/WelcomeScreen.dart';
+import 'package:english_quiz/AntonymQuizScreen.dart';
 
 const TextStyle buttonText = TextStyle(
   fontWeight: FontWeight.w500,

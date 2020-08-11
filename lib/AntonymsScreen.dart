@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:english_quiz/CustomButtons.dart';
 import 'package:english_quiz/main.dart';
+import 'package:english_quiz/AntonymQuizScreen.dart';
 
 const Color kSynonymButtonColorUnselected = Color(0xFFF1DDA0);
 const Color kSynonymButtonColorSelected = Color(0xFFF6F6F6);
@@ -185,6 +186,9 @@ class _AntonymScreenState extends State<AntonymScreen> {
       children: <Widget>[
         Expanded(
           child: CustomButton(
+            shapeborder: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(12.0),
+            ),
             height: 100.0,
             childw: textWidgetCreator(
                 levels[indexLevels1], ts_LevelButtons[indexTextStyles1]),
@@ -216,6 +220,9 @@ class _AntonymScreenState extends State<AntonymScreen> {
         Expanded(
           //padding: EdgeInsets.all(8.0),
           child: CustomButton(
+            shapeborder: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(12.0),
+            ),
             height: 100.0,
             childw: textWidgetCreator(
                 levels[indexLevels2], ts_LevelButtons[indexTextStyles2]),
@@ -435,6 +442,9 @@ class _AntonymScreenState extends State<AntonymScreen> {
             ],
           ),
           CustomButton(
+            shapeborder: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(12.0),
+            ),
             width: 350.0,
             height: 70.0,
             childw: Text(
@@ -443,6 +453,10 @@ class _AntonymScreenState extends State<AntonymScreen> {
             ),
             func: () {
               //TODO this is called when continue is pressed
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => (AntonymQuizScreen())));
             },
             c: Colors.white,
           ),

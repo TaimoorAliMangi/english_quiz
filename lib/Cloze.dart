@@ -185,6 +185,9 @@ class _ClozeScreenState extends State<ClozeScreen> {
       children: <Widget>[
         Expanded(
           child: CustomButton(
+            shapeborder: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(12.0),
+            ),
             height: 100.0,
             childw: textWidgetCreator(
                 levels[indexLevels1], ts_LevelButtons[indexTextStyles1]),
@@ -216,6 +219,9 @@ class _ClozeScreenState extends State<ClozeScreen> {
         Expanded(
 //padding: EdgeInsets.all(8.0),
           child: CustomButton(
+            shapeborder: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(12.0),
+            ),
             height: 100.0,
             childw: textWidgetCreator(
                 levels[indexLevels2], ts_LevelButtons[indexTextStyles2]),
@@ -435,6 +441,9 @@ class _ClozeScreenState extends State<ClozeScreen> {
             ],
           ),
           CustomButton(
+            shapeborder: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(12.0),
+            ),
             width: 350.0,
             height: 70.0,
             childw: Text(

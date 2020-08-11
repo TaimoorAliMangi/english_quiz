@@ -96,6 +96,9 @@ class _LoginScreenState extends State<LoginScreen> {
                         ),
                       ),
                       CustomButton(
+                        shapeborder: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(12.0),
+                        ),
                         childw: Text(
                           'Sign In',
                           style: buttonText,
@@ -140,6 +143,9 @@ class _LoginScreenState extends State<LoginScreen> {
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: <Widget>[
                             CustomButton(
+                              shapeborder: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(12.0),
+                              ),
                               childw: Text(
                                 'Facebook',
                                 style: buttonText,
@@ -155,6 +161,9 @@ class _LoginScreenState extends State<LoginScreen> {
                             ),
                             SizedBox(width: 10.0),
                             CustomButton(
+                              shapeborder: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(12.0),
+                              ),
                               childw: Text(
                                 'Gmail',
                                 style: buttonText,
@@ -202,6 +211,9 @@ class _LoginScreenState extends State<LoginScreen> {
                         height: 10.0,
                       ),
                       CustomButton(
+                        shapeborder: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(12.0),
+                        ),
                         childw: Text(
                           'Sign up',
                           style: buttonText,

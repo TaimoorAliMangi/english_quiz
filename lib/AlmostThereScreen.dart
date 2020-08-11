@@ -75,6 +75,9 @@ class _AlmostThereScreenState extends State<AlmostThereScreen> {
                         });
                       },
                       c: ksignupButtonColor,
+                      shapeborder: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(12.0),
+                      ),
                     ),
                   ),
                 ],

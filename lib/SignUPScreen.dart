@@ -100,6 +100,9 @@ class _SignUpFormState extends State<SignUpForm> {
                   Padding(
                     padding: EdgeInsets.fromLTRB(0.0, 15.0, 10.0, 0.0),
                     child: CustomButton(
+                      shapeborder: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(12.0),
+                      ),
                       childw: Text(
                         'Sign up',
                         style: buttonText,

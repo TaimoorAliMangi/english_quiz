@@ -118,6 +118,9 @@ class _CategorySelectionScreenState extends State<CategorySelectionScreen> {
                   Padding(
                     padding: const EdgeInsets.fromLTRB(0.0, 15.0, 15.0, 0.0),
                     child: CustomButton(
+                      shapeborder: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(12.0),
+                      ),
                       childw: Column(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: <Widget>[
@@ -147,6 +150,9 @@ class _CategorySelectionScreenState extends State<CategorySelectionScreen> {
                   Padding(
                     padding: const EdgeInsets.fromLTRB(0.0, 15.0, 15.0, 0.0),
                     child: CustomButton(
+                      shapeborder: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(12.0),
+                      ),
                       childw: Column(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: <Widget>[
@@ -175,6 +181,9 @@ class _CategorySelectionScreenState extends State<CategorySelectionScreen> {
                   Padding(
                     padding: const EdgeInsets.fromLTRB(0.0, 15.0, 15.0, 0.0),
                     child: CustomButton(
+                      shapeborder: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(12.0),
+                      ),
                       childw: Column(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: <Widget>[
@@ -203,6 +212,9 @@ class _CategorySelectionScreenState extends State<CategorySelectionScreen> {
                   Padding(
                     padding: const EdgeInsets.fromLTRB(0.0, 15.0, 15.0, 0.0),
                     child: CustomButton(
+                      shapeborder: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(12.0),
+                      ),
                       childw: Text(
                         'Cloze',
                         style: buttonTextCategoryScreen,
