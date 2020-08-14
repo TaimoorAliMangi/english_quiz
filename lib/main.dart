@@ -6,6 +6,8 @@ import 'package:flutter/material.dart';
 import 'package:english_quiz/WelcomeScreen.dart';
 import 'package:english_quiz/AntonymQuizScreen.dart';
 
+import 'ShuffledQuizScreen.dart';
+
 const TextStyle buttonText = TextStyle(
   fontWeight: FontWeight.w500,
   fontSize: 20.0,

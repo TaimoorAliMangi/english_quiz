@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:english_quiz/CustomButtons.dart';
 import 'package:english_quiz/main.dart';
 
+import 'SynonymQuizScreen.dart';
+
 const Color kSynonymButtonColorUnselected = Color(0xFFADD9C0);
 const Color kSynonymButtonColorSelected = Color(0xFFF6F6F6);
 
@@ -440,6 +442,10 @@ class _SynonymScreenState extends State<SynonymScreen> {
             ),
             func: () {
               //TODO this is called when continue is pressed
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => (SynonymQuizScreen())));
             },
             c: Colors.white,
           ),

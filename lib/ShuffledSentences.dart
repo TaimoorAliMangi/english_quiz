@@ -1,3 +1,4 @@
+import 'package:english_quiz/ShuffledQuizScreen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:english_quiz/CustomButtons.dart';
@@ -452,6 +453,10 @@ class _ShuffledScreenState extends State<ShuffledScreen> {
             ),
             func: () {
               //TODO this is called when continue is pressed
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => (ShuffledQuizScreen())));
             },
             c: Colors.white,
           ),
