@@ -2,6 +2,7 @@ import 'package:english_quiz/AntonymsScreen.dart';
 import 'package:english_quiz/Cloze.dart';
 import 'package:english_quiz/ShuffledSentences.dart';
 import 'package:english_quiz/SynonymScreen.dart';
+import 'LeaderboardScreen.dart';
 import 'main.dart';
 import 'package:flutter/material.dart';
 import 'package:english_quiz/CustomButtons.dart';
@@ -32,33 +33,45 @@ class _CategorySelectionScreenState extends State<CategorySelectionScreen> {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: <Widget>[
-                  Row(
-                    children: <Widget>[
-                      Icon(
-                        Icons.star,
-                        color: ksignupButtonColor,
-                        size: 35.0,
-                      ),
-                      Container(
-                        width: 50.0,
-                        height: 30.0,
-                        padding: EdgeInsets.all(2.0),
-                        child: Text(
-                          scoreStarCategory.toString(),
-                          style: scoreCategoryScreen,
-                          textAlign: TextAlign.start,
+                  GestureDetector(
+                    onTap: () {
+                      //TODO when score is clicked
+                      setState(() {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => LeaderboardScreen(),
+                            ));
+                      });
+                    },
+                    child: Row(
+                      children: <Widget>[
+                        Icon(
+                          Icons.star,
+                          color: ksignupButtonColor,
+                          size: 35.0,
                         ),
-                        decoration: BoxDecoration(
-                          shape: BoxShape.rectangle,
-                          //borderRadius: BorderRadius.circular(5.0),
-                          border: Border(
-                              top: borderside,
-                              right: borderside,
-                              bottom: borderside,
-                              left: BorderSide.none),
-                        ),
-                      )
-                    ],
+                        Container(
+                          width: 50.0,
+                          height: 30.0,
+                          padding: EdgeInsets.all(2.0),
+                          child: Text(
+                            scoreStarCategory.toString(),
+                            style: scoreCategoryScreen,
+                            textAlign: TextAlign.start,
+                          ),
+                          decoration: BoxDecoration(
+                            shape: BoxShape.rectangle,
+                            //borderRadius: BorderRadius.circular(5.0),
+                            border: Border(
+                                top: borderside,
+                                right: borderside,
+                                bottom: borderside,
+                                left: BorderSide.none),
+                          ),
+                        )
+                      ],
+                    ),
                   ),
                   GestureDetector(
                     onTap: () {
